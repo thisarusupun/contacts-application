@@ -14,7 +14,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://contacts-application-client.vercel.app/"],
+    origin: ["https://contacts-application-client.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
