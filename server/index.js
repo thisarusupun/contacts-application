@@ -16,6 +16,7 @@ app.use(
   cors({
     origin: ["https://contacts-application-client.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
   })
 );
 
