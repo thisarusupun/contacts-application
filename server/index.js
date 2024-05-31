@@ -17,7 +17,6 @@ app.use(
     origin: ["https://contacts-application-client.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
-    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
