@@ -14,9 +14,9 @@ const DeleteContact = ({ id, name }) => {
       confirmButtonColor: "#083F46",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes",
-    }).then((result) => {
+    }).then(async (result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:5000/api/contacts/${id}`, {
+        await axios.delete(`${import.meta.env.VITE_BASE_URL}/contacts/${id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

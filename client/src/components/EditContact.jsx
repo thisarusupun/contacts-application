@@ -32,7 +32,7 @@ const EditContact = ({ id }) => {
   const handleSave = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:5000/api/contacts/${id}`, updatedUser, {
+      .put(`${import.meta.env.VITE_BASE_URL}/contacts/${id}`, updatedUser, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
