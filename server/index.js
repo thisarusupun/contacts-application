@@ -20,6 +20,9 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
+app.options("*", cors());
+
 app.use("/api/contacts", contactRoute);
 app.use("/api/users", userRoute);
 
